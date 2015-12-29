@@ -12,7 +12,7 @@
 tagsInput.provider('tagsInputConfig', function() {
     var globalDefaults = {},
         interpolationStatus = {},
-        autosizeThreshold = 3;
+        autosizeThreshold = 10;
 
     /**
      * @ngdoc method

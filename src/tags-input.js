@@ -175,7 +175,7 @@ tagsInput.directive('tagsInput', function($timeout, $document, $window, tagsInpu
             tagsInputConfig.load('tagsInput', $scope, $attrs, {
                 template: [String, 'ngTagsInput/tag-item.html'],
                 type: [String, 'text', validateType],
-                placeholder: [String, 'Add a tag'],
+                placeholder: [String, ''],
                 tabindex: [Number, null],
                 removeTagSymbol: [String, String.fromCharCode(215)],
                 replaceSpacesWithDashes: [Boolean, true],
@@ -314,7 +314,7 @@ tagsInput.directive('tagsInput', function($timeout, $document, $window, tagsInpu
             }
 
             attrs.$observe('disabled', function(value) {
-                scope.disabled = value;
+                scope.disabled = (value === 'true' || value === true);
             });
 
             scope.eventHandlers = {

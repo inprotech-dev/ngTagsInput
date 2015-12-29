@@ -38,7 +38,7 @@ tagsInput.directive('tiAutosize', function(tagsInputConfig) {
                     span.css('display', 'none');
                 }
 
-                element.css('width', width ? width + threshold + 'px' : '');
+                element.css('width', (width || 5) + threshold + 'px');
 
                 return originalValue;
             };
