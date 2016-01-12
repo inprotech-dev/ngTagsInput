@@ -317,6 +317,10 @@ tagsInput.directive('tagsInput', function($timeout, $document, $window, tagsInpu
                 scope.disabled = (value === 'true' || value === true);
             });
 
+            if(attrs.autofocus === 'true') {
+                element.find('.input').focus();
+            }
+
             scope.eventHandlers = {
                 input: {
                     keydown: function($event) {
